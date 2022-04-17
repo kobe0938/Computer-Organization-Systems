@@ -1,0 +1,89 @@
+# File: custom_tests
+# ------------------
+# This file contains a list of custom tests to be run by the sanity check tool.
+# Refer to cs107.stanford.edu/working-on-assignments.html for more information.
+#
+# Below are example custom tests, you can edit this file to change or add new tests.
+
+sat 16 -32768 -32768
+# edge case
+sat 8 126 4
+# edge case
+sat 8 3 3
+# ordinary case
+sat 8 -120 -34
+# edge case
+sat 4 7 7
+# edge case
+sat 4 0 0
+# 0 case
+sat 4 0 1
+# 1 case
+sat 4 1 1
+# 1 case
+sat 4 -1 -1
+# -1 case
+sat 4 -7 -7
+# edge case
+sat 4 -8 -8
+# edge case
+sat 4
+# one arg case
+sat 8
+# one arg case
+
+automata 90
+# ordinary case
+automata 91
+# ordinary case
+automata 77
+# ordinary case
+automata 0
+# edge case
+automata 1
+# 1 case
+automata 255
+# edge case
+automata 254
+# ordinary case
+automata 100
+# ordinary case
+automata 9
+# ordinary case
+automata 127
+# ordinary case
+automata 7
+# ordinary case
+
+utf8 0x20AC
+# 3bytes ordinary case
+utf8 0X0
+# edge case
+utf8 0Xffff
+# 3bytes ordinary case
+utf8 0X1234
+# 3bytes ordinary case
+utf8 0X1
+# 1byte ordinary case
+utf8 0X10
+# 1byte ordinary case
+utf8 0X70
+# 1byte ordinary case
+utf8 0Xff
+# 2bytes ordinary case
+utf8 0X88
+# 2bytes ordinary case
+utf8 0X0
+# 1byte edge case
+utf8 0X7F
+# 1byte edge case
+utf8 0X80
+# 2bytes edge case
+utf8 0X7FF
+# 2bytes edge case
+utf8 0X800
+# 3bytes edge case
+utf8 0XFFFF
+# 3bytes edge case
+utf8 0x78 0x8f 0x456 0x76e
+#several input

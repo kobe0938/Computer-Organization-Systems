@@ -1,0 +1,251 @@
+# callgrind format
+version: 1
+creator: callgrind-3.15.0
+pid: 2804784
+cmd:  ./trials
+part: 1
+
+
+desc: I1 cache: 
+desc: D1 cache: 
+desc: LL cache: 
+
+desc: Timerange: Basic block 0 - 27749
+desc: Trigger: Program termination
+
+positions: line
+events: Ir
+summary: 427
+
+
+ob=(3) /usr/lib/x86_64-linux-gnu/libc-2.31.so
+fl=(128) /build/glibc-eX1tMB/glibc-2.31/csu/../csu/libc-start.c
+fn=(394) (below main)
+cob=(6) /afs/.ir.stanford.edu/users/x/i/xiaokunc/cs107/lab7/trials
+cfi=(134) /afs/.ir/users/x/i/xiaokunc/cs107/lab7/trials.c
+cfn=(420) main
+calls=1 55 
+308 427
+
+ob=(6)
+fl=(134)
+fn=(482) two_to_power_A
+14 1
++1 5
+cob=(4) /usr/lib/x86_64-linux-gnu/libm-2.31.so
+cfi=(144) /build/glibc-eX1tMB/glibc-2.31/math/./w_pow_template.c
+cfn=(468) pow@@GLIBC_2.29
+calls=1 +16 
+* 126
+* 1
+* 1
++1 2
+
+fn=(490) two_to_power_C
+26 1
+-1 1
++1 94
++1 46
+-1 92
++4 2
+
+fn=(492) two_to_power_D
+34 3
++1 1
+
+fn=(420)
+cfn=(492)
+calls=1 34 
+62 4
+cfn=(490)
+calls=1 26 
+62 236
+cfn=(486) two_to_power_B
+calls=1 19 
+62 51
+cfn=(482)
+calls=1 14 
+62 136
+
+fn=(486)
+19 1
++1 4
+cob=(4)
+cfi=(142) /build/glibc-eX1tMB/glibc-2.31/math/../sysdeps/ieee754/dbl-64/e_exp2.c
+cfn=(456) exp2@@GLIBC_2.29
+calls=1 +71 
+* 42
+* 1
+* 1
++1 2
+
+fl=(127) ???
+fn=(392) _start
+cob=(3)
+cfi=(128)
+cfn=(394)
+calls=1 137 
+0 427
+
+ob=(1) /usr/lib/x86_64-linux-gnu/ld-2.31.so
+fl=(1) ???
+fn=(0) 0x0000000000001100
+cob=(6)
+cfi=(127)
+cfn=(392)
+calls=1 0 
+0 427
+
+ob=(4)
+fl=(145) /build/glibc-eX1tMB/glibc-2.31/math/../sysdeps/ieee754/dbl-64/e_pow.c
+fn=(472) __ieee754_pow_fma
+283 1
+45 2
+283 1
+45 1
+fi=(148) /build/glibc-eX1tMB/glibc-2.31/math/../sysdeps/ieee754/dbl-64/math_config.h
++22 2
+fe=(145)
+-22 1
+292 1
+45 1
+292 3
+-8 1
++8 4
+62 1
++5 1
++10 1
++11 1
+-26 1
++50 2
+-49 1
++1 1
++48 1
+-48 1
+-1 1
++4 1
++3 1
+-5 2
++5 1
+-5 1
++5 3
++7 1
++11 1
+-11 1
++18 1
+-5 1
++22 1
+-22 1
++22 1
+-23 1
++2 2
++5 1
++17 1
+-16 1
++4 1
+-1 1
++12 1
+-10 1
++11 1
+-1 1
+-10 1
++11 1
+-1 1
++1 1
++1 1
++1 2
+369 1
++1 1
+45 1
+fi=(148)
++22 1
+fe=(145)
+-22 1
+193 1
++1 1
+370 1
+194 2
++31 4
++18 1
+fi=(148)
+67 1
+fe=(145)
+227 1
++2 1
++4 1
++1 1
+-5 1
++4 1
++1 1
++9 1
+-10 1
++4 1
+-6 1
++12 2
+-3 1
++3 4
++1 2
+fi=(148)
+79 1
+fe=(145)
+249 2
+
+fl=(142)
+fn=(456)
+91 1
+-5 1
+fi=(148)
+-19 1
+fe=(142)
++19 1
++11 1
++1 3
++25 1
++15 1
+-15 3
+fi=(148)
+-56 1
+fe=(142)
++58 1
++3 1
++1 1
+-1 1
++1 1
+-3 1
++12 1
+-10 1
++4 1
++6 1
+-3 2
++3 10
++1 2
+fi=(148)
+-60 1
+fe=(142)
++65 3
+
+fl=(144)
+fn=(468)
+31 2
++1 3
+cob=(2) ???
+cfi=(18) ???
+cfn=(470) 0x0000000004866310
+calls=2 -32 
+* 107
++1 8
++12 3
++4 2
+-4 1
+
+ob=(2)
+fl=(18)
+fn=(470)
+0 2
+cob=(4)
+cfi=(145)
+cfn=(472)
+calls=2 283 
+0 105
+
+totals: 427

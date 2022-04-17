@@ -1,0 +1,189 @@
+# callgrind format
+version: 1
+creator: callgrind-3.15.0
+pid: 2805174
+cmd:  ./copy
+part: 1
+
+
+desc: I1 cache: 
+desc: D1 cache: 
+desc: LL cache: 
+
+desc: Timerange: Basic block 0 - 49134
+desc: Trigger: Program termination
+
+positions: line
+events: Ir
+summary: 11690
+
+
+ob=(3) /usr/lib/x86_64-linux-gnu/libc-2.31.so
+fl=(112) /build/glibc-eX1tMB/glibc-2.31/csu/../csu/libc-start.c
+fn=(350) (below main)
+cob=(5) /afs/.ir.stanford.edu/users/x/i/xiaokunc/cs107/lab7/copy
+cfi=(118) /afs/.ir/users/x/i/xiaokunc/cs107/lab7/copy.c
+cfn=(376) main
+calls=1 91 
+308 11690
+
+fl=(122) /build/glibc-eX1tMB/glibc-2.31/string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+fn=(394) __memcpy_avx_unaligned_erms
+225 130
++1 130
++6 130
++1 130
++1 2
++1 2
++42 128
++1 128
++2 128
++1 128
++31 128
++1 128
++1 128
++1 128
++1 128
++18 2
++1 2
++5 2
++1 2
++36 2
++1 2
++2 2
++3 2
++1 2
++1 2
++1 2
++1 2
++2 2
++1 2
++3 2
++1 2
++2 2
++2 2
++2 2
++2 2
++3 2
++1 2
++4 14
++1 14
++1 14
++1 14
++1 14
++1 14
++1 14
++1 14
++1 14
++1 14
++1 14
++1 14
++1 14
++2 2
++1 2
++1 2
++1 2
++2 2
++1 2
++1 2
+
+ob=(5)
+fl=(118)
+fn=(500) copy_memcpy
+59 1
++1 1
+cob=(3)
+cfi=(122)
+cfn=(394)
+calls=1 225 
+* 126
+* 1
++1 2
+
+fn=(494) copy_longloop
+36 1
++4 1
++2 259
++1 256
+-1 256
++4 1
+
+fn=(492) copy_intloop
+24 1
++4 1
++2 515
++1 512
+-1 512
++4 1
+
+fn=(496) copy_memloop
+48 7
++1 2
++3 259
++2 128
+-1 512
+cob=(3)
+cfi=(122)
+cfn=(394)
+calls=128 225 
+* 1664
+* 128
+-1 256
++5 7
+
+fn=(400) copy_charloop
+13 1
++5 2051
++1 2048
+-1 2048
++4 1
+
+fn=(498) copy_memmove
+63 1
++1 1
+cob=(3)
+cfi=(122)
+cfn=(394)
+calls=1 225 
+* 126
+* 1
++1 2
+
+fn=(376)
+cfn=(500)
+calls=1 59 
+97 131
+cfn=(498)
+calls=1 63 
+97 131
+cfn=(496)
+calls=1 48 
+97 2963
+cfn=(494)
+calls=1 36 
+97 774
+cfn=(492)
+calls=1 24 
+97 1542
+cfn=(400)
+calls=1 13 
+97 6149
+
+fl=(111) ???
+fn=(348) _start
+cob=(3)
+cfi=(112)
+cfn=(350)
+calls=1 137 
+0 11690
+
+ob=(1) /usr/lib/x86_64-linux-gnu/ld-2.31.so
+fl=(1) ???
+fn=(0) 0x0000000000001100
+cob=(5)
+cfi=(111)
+cfn=(348)
+calls=1 0 
+0 11690
+
+totals: 11690

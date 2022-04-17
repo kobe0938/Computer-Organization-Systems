@@ -1,0 +1,78 @@
+# File: custom_tests
+# ------------------
+# This file contains a list of custom tests to be run by the sanity check tool.
+# Refer to the "how to work on assignments" page on the course website for more information.
+#
+# Below are example custom tests, you can edit this file to change or add new tests.
+
+#default one
+myprintenv HOM
+#edge case
+myprintenv SHELL
+#edge case
+myprintenv SSH_TTY
+#normal case
+myprintenv PWD
+#normal case
+myprintenv LOGNAME
+#normal case
+myprintenv XDG_SESSION_ID
+#normal case
+myprintenv TMP
+#2 case
+myprintenv TERM USER
+#3 case
+myprintenv LANG TMPDIR HOME
+#containing dupilicate(LANG) case
+myprintenv LANG LANGUAGE
+#dupilicate(LANG) case
+myprintenv PATH PATH
+#no print case
+myprintenv should_not_print
+#no print case2
+myprintenv should_not_print snp2
+#tenmporary changing case
+myprintenv USER=otheruser USER
+
+
+
+
+#defalut case
+tokenize ", " "red, green, blue,orange, yellow"
+#continous case
+tokenize ", " "red, green,,,    blue,orange, yellow"
+#continous case
+tokenize ", " "red, green,,, ,     blue,orange, ,yellow"
+#continous case
+tokenize ", " "      , red, green,,,    blue,orange, yellow"
+#continous case
+tokenize " " "red, green,,,    blue,orange, yellow"
+#buf limitation case
+tokenize "," "red, green,,,    blue,orange, yellow" 2
+#buf limitation case
+tokenize "," "red, green,,,    blue,orange, yellow" 3
+#buf limitation case
+tokenize "," "red, green,,,    blue,orange, yellow" 4
+#buf limitation case
+tokenize "," "red, green,,,    blue,orange, yellow" 5
+#buf limitation case
+tokenize "," "red, green,,,    blue,orange, yellow" 6
+#buf limitation case
+tokenize "," "red, green,,,    blue,orange, yellow" 8
+#empty case
+tokenize "," " "
+#empty canse
+tokenize
+
+#default case
+mywhich
+#exsit case
+mywhich ls
+#exsit case
+mywhich emacs
+#non-exsit case
+mywhich asdf
+#non-exsit case
+mywhich qwer
+#mutiple case
+mywhich qwer emacs ls wdffg

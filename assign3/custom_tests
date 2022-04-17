@@ -1,0 +1,69 @@
+# File: custom_tests
+# ------------------
+# This file contains a list of custom tests to be run by the sanity check tool.
+# Refer to the page on working on assignments, linked to from the Assignments page,
+# for more information.
+#
+# Below are example custom tests, you can edit this file to change or add new tests.
+
+mycat samples/names
+
+#test colors
+mycat samples/colors
+
+#test no end newlines
+mycat samples/colors_no_end_newline
+
+#test names
+mycat samples/names
+
+#the following are self-made txt, all random generated to test the behavior
+#of different length, repeated times, and empty in some cases, and also test the
+#double behavior of the readline, as well as the edge case of it(eg, 32, 64 etc.)
+mycat five_hun.txt
+mycat 2048.txt
+mycat 32.txt
+mycat 64plus128.txt
+mycat ultimate_a.txt
+mycat oneline.txt
+mycat oneline_excess_32.txt
+mycat just_newline.txt
+mycat nothing.txt
+
+#test colors
+mytail samples/colors
+
+#test no end newlines
+mytail samples/colors_no_end_newline
+
+#the following are self-made txt, all random generated to test the behavior
+#of different length, repeated times, and empty in some cases, and also test the
+#double behavior of the readline, as well as the edge case of it(eg, 32, 64 etc.)
+mytail five_hun.txt
+mytail 2048.txt
+mytail 32.txt
+mytail 64plus128.txt
+mytail ultimate_a.txt
+mytail oneline.txt
+mytail oneline_excess_32.txt
+mytail just_newline.txt
+mytail nothing.txt
+
+#test names
+myuniq samples/names
+
+#test colors_no_end_newline
+myuniq samples/colors_no_end_newline
+
+#the following are self-made txt, all random generated to test the behavior
+#of different length, repeated times, and empty in some cases, and also test the
+#double behavior of the readline, as well as the edge case of it(eg, 32, 64 etc.)
+myuniq five_hun.txt
+myuniq 2048.txt
+myuniq 32.txt
+myuniq 64plus128.txt
+myuniq ultimate_a.txt
+myuniq oneline.txt
+myuniq oneline_excess_32.txt
+myuniq just_newline.txt
+myuniq nothing.txt

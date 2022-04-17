@@ -1,0 +1,73 @@
+# File: custom_tests
+# ------------------
+# This file contains a list of custom tests to be run by the sanity check tool.
+# Refer to the CS107 website for more information.
+#
+# Below are example custom tests, you can edit this file to change or add new tests.
+
+myls -a /afs/ir/class/cs107/samples
+
+#some non-exsiting path on myls
+myls -a /afs/ir/class/cs107/sample
+myls -a /afs/ir/class/cs106
+myls /afs/ir/class/cs107/sample
+myls -z /afs/ir/class/cs107/sample
+myls sample
+myls -a /afs/ir/class/cs107/samples/colors
+myls -a /afs/ir/class/cs107/samples/color
+
+#using -z on myls
+myls -z /afs/ir/class/cs107/samples
+myls -z /afs/ir/class/cs107/
+myls -z /afs/ir/class/cs107
+myls -z /afs/ir/class
+
+#using -a on myls
+myls -a /afs/ir/class/cs107/samples
+myls -a /afs/ir/class/cs107/
+myls -a /afs/ir/class/cs107
+myls -a /afs/ir/class
+
+#empty on myls
+myls
+myls .
+
+#both -a -z on myls
+myls -a -z /afs/ir/class/cs107/samples
+myls -az /afs/ir/class/cs107/samples
+myls -z -a /afs/ir/class/cs107/samples
+myls az /afs/ir/class/cs107/samples
+
+#test binsert with -i and -s
+test_binsert -i 2 3 4 6 3 49 453 2234
+test_binsert -i 9 9 9
+test_binsert -s 2 3 4 6 3 49 453 2234
+test_binsert -s "2" "He" "Heuidj" "djis" "desf" "a"
+test_binsert -i -s 2 3 4 6 3 49 453 2234
+test_binsert -e ew re
+test_binsert -s dirt tgjri fjris aii djao
+
+#test mysort with combination of -l -n -r -u
+mysort -l -n -r -u samples/names
+mysort -n -r -u samples/names
+mysort -l -u samples/names
+mysort -l -r samples/names
+mysort -n -r samples/names
+mysort -n -u samples/names
+mysort -l samples/names
+mysort -n samples/names
+mysort -r samples/names
+mysort -u samples/names
+mysort samples/names
+
+mysort -l -n -r -u samples/colors
+mysort -n -r -u samples/colors
+mysort -l -u samples/colors
+mysort -l -r samples/colors
+mysort -n -r samples/colors
+mysort -n -u samples/colors
+mysort -l samples/colors
+mysort -n samples/colors
+mysort -r samples/colors
+mysort -u samples/colors
+mysort samples/colors

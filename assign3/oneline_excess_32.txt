@@ -1,0 +1,1 @@
+this file has oneline(meaning without thenewline char) and its length is excess 32 in order to check the resize performance of the readline! 
